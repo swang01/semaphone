@@ -42,8 +42,6 @@ int remove_story(){
 }
 
 int view(){
-	//Open file for reading only...
-
 	FILE *fptr;
 	char ch;
 	fptr = fopen("semaphone.txt", "r");
@@ -52,8 +50,6 @@ int view(){
 		return -1;
 	}
 	printf("The story so far...\n");
-
-	//Print file character by character...
 	ch = fgetc(fptr);
 	while (ch != EOF){
 		printf("%c", ch);
@@ -61,8 +57,5 @@ int view(){
 	}
 	printf("\n");
 	fclose(fptr);
-	//sb.sem_num = 0;
-	//semop(semd, &sb, 1);
-
 	return 0;
 }
